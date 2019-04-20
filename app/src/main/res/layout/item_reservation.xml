@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/iv_subject_color"
+        android:layout_width="12dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"/>
+
+<!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp">
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11:00 - 11:45"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/tv_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ohjelmoitavat logiikat / Uusintatentti"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tv_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frami A420.4 (atk 35)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/tv_scheduling_group"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pienryhmä 4"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/tv_teacher"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heikki Palomäki"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textSize="16sp"/>
+    </LinearLayout>
+-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+            android:id="@+id/tv_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="1dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            android:textSize="20sp" />
+
+        <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_time_clock_icon"
+            android:drawableStart="@drawable/ic_time_clock_icon"
+            android:drawablePadding="1dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:compoundDrawableHeight="20dp"
+            app:compoundDrawableWidth="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textSize="16sp"/>
+
+        <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+            android:id="@+id/tv_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_building"
+            android:drawableStart="@drawable/ic_building"
+            android:drawablePadding="1dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:compoundDrawableHeight="20dp"
+            app:compoundDrawableWidth="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textSize="16sp"/>
+
+        <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+            android:id="@+id/tv_scheduling_group"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_group"
+            android:drawableStart="@drawable/ic_group"
+            android:drawablePadding="1dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:compoundDrawableHeight="20dp"
+            app:compoundDrawableWidth="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textSize="16sp"/>
+
+        <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+            android:id="@+id/tv_teacher"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_room"
+            android:drawableStart="@drawable/ic_room"
+            android:drawablePadding="1dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:compoundDrawableHeight="20dp"
+            app:compoundDrawableWidth="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</LinearLayout>

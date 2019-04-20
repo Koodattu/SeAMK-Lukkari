@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardMaxElevation="4dp"
+    app:cardElevation="4dp"
+    android:layout_marginBottom="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/extra_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/extrasGoldColor">
+
+            <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+                android:id="@+id/extra_title_with_icon"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/support"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:drawablePadding="8dp"
+                app:compoundDrawableHeight="36dp"
+                app:compoundDrawableWidth="36dp"
+                android:textSize="20sp"
+                android:drawableStart="@drawable/ic_thumb_up"
+                android:drawableLeft="@drawable/ic_thumb_up"
+                android:gravity="center_vertical"
+                android:drawableEnd="@drawable/ic_right_arrow"
+                android:drawableRight="@drawable/ic_right_arrow"/>
+
+            <TextView
+                android:layout_below="@id/extra_title_with_icon"
+                android:id="@+id/extra_desc"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

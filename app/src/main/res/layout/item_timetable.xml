@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/relative_layout_week_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+<com.alamkanak.weekview.WeekView
+    android:id="@+id/weekView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:eventTextColor="@android:color/white"
+    app:textSize="12sp"
+    app:hourHeight="60dp"
+    app:headerColumnPadding="8dp"
+    app:headerColumnTextColor="#8f000000"
+    app:headerRowPadding="12dp"
+    app:columnGap="8dp"
+    app:noOfVisibleDays="5"
+    app:headerRowBackgroundColor="#ffefefef"
+    app:dayBackgroundColor="#05000000"
+    app:todayBackgroundColor="#1848adff"
+    app:headerColumnBackground="#ffffffff"
+    app:firstDayOfWeek="monday" />
+
+    <ProgressBar
+        android:id="@+id/progressbar_week_view"
+        android:padding="150dp"
+        android:indeterminate="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_week_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:padding="8dp"
+            android:layout_gravity="center"
+            android:text="Tietojen hakeminen epäonnistui."
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/b_retry"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="Yritä uudelleen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

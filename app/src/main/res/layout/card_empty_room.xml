@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        card_view:cardMaxElevation="2dp"
+        card_view:cardElevation="2dp"
+        android:layout_marginTop="-4dp"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:contentPadding="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                        <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+                            android:id="@+id/room_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="1dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/building_and_type"
+                            android:layout_below="@+id/room_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+                                android:id="@+id/building"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="1dp"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textSize="14sp"
+                                android:drawableStart="@drawable/ic_building"
+                                android:drawableLeft="@drawable/ic_building"
+                                app:compoundDrawableHeight="20dp"
+                                app:compoundDrawableWidth="20dp" />
+                            <TextView
+                                android:text=" - "
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+                            android:id="@+id/status"
+                            android:layout_below="@+id/building_and_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="1dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textSize="14sp"
+                            android:drawableStart="@drawable/ic_time_clock_icon"
+                            android:drawableLeft="@drawable/ic_time_clock_icon"
+                            app:compoundDrawableHeight="20dp"
+                            app:compoundDrawableWidth="20dp" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

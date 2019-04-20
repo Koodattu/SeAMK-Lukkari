@@ -1,0 +1,46 @@
+{
+	"_source": ["startDate",
+	"endDate",
+	"code",
+	"teacher.*",
+	"localizedName.*",
+	"studentGroups.*"],
+	"size": 100,
+	"query": {
+		"constant_score": {
+			"filter": {
+				"bool": {
+					"should": [{
+						"terms": {
+							"teacher.name.raw": []
+						}
+					},
+					{
+						"terms": {
+							"studentGroups.code.raw": []
+						}
+					},
+					{
+						"terms": {
+							"code.raw": []
+						}
+					}],
+					"must": [{
+						"range": {
+							"startDate": {
+								"gte": "2018-01-01",
+								"lte": "2019-01-01"
+							}
+						}
+					},
+					{
+						"term": {
+							"currentStatus": ["APPROVED",
+							"PUBLISHED"]
+						}
+					}]
+				}
+			}
+		}
+	}
+}

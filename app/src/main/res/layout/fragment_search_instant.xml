@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:layout_gravity="center"
+        android:layout_margin="0dp"
+        android:id="@+id/tl"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/tr0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rakennus"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+            <TextView
+                android:id="@+id/TVChosenBuildingInstant"
+                android:text="-"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+            <Button
+                android:id="@+id/search_choose_building_instant"
+                android:text="Valitse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/tr8">
+            <Button
+                android:id="@+id/BSuoritaHakuInstant"
+                android:text="Suorita haku"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:padding="8dp"/>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    card_view:cardMaxElevation="2dp"
+    card_view:cardElevation="2dp"
+    android:layout_marginTop="-4dp"
+    card_view:cardCornerRadius="0dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:contentPadding="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_warning_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+                android:id="@+id/realization_duplicate_warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/duplicate_realization"
+                android:textColor="?android:attr/colorFocusedHighlight"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:drawablePadding="4dp"
+                app:compoundDrawableHeight="20dp"
+                app:compoundDrawableWidth="20dp"
+                android:drawableStart="@drawable/ic_warning"
+                android:drawableLeft="@drawable/ic_warning"
+                app:drawableTint="?android:attr/colorFocusedHighlight"
+                android:layout_marginBottom="2dp"/>
+
+            <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+                android:id="@+id/realization_no_reservations_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:text="@string/no_reservations"
+                android:textColor="@color/colorAccent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:drawableStart="@drawable/ic_information"
+                android:drawableLeft="@drawable/ic_information"
+                app:compoundDrawableHeight="20dp"
+                app:compoundDrawableWidth="20dp"
+                app:drawableTint="@color/colorAccent"
+                android:layout_marginBottom="2dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_below="@+id/linear_layout_warning_info"
+            android:id="@+id/subject"
+            android:layout_alignParentStart="true"
+            android:text="Piirilevysuunnittelu"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/realization"
+            android:layout_alignParentStart="true"
+            android:text="KL04BT40110-3001"
+            android:layout_below="@+id/subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:layout_below="@+id/linear_layout_warning_info"
+            android:id="@+id/button_delete"
+            android:layout_toStartOf="@+id/button_hide_show"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_delete"
+            style="@style/Widget.AppCompat.Button.Colored"
+            app:backgroundTint="@android:color/holo_red_dark"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_hide_show"
+            android:layout_below="@+id/linear_layout_warning_info"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Piilota"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

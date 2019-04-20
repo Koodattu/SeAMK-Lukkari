@@ -1,0 +1,41 @@
+{
+	"_source": [
+	],
+	"size": 0,
+	"query": {
+		"filtered": {
+			"filter": {
+				"and": [{
+					"range": {
+						"startDate": {
+							"gte": "2017-01-01",
+							"lte": "2019-01-01"
+						}
+					}
+				}]
+			}
+		}
+	},
+	"aggs": {
+		"mostReservedBuildings": {
+			"terms": {
+				"field": "location.parent.code.raw",
+				"size": 10000,
+				"order": {
+					"_count": "desc"
+				}
+			},
+			"aggs": {
+				"mostReservedBuildingsNames": {
+					"terms": {
+						"field": "location.parent.localizedName.valueFi.raw",
+						"size": 1,
+						"order": {
+							"_count": "desc"
+						}
+					}
+				}
+			}
+		}
+	}
+}

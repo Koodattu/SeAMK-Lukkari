@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.seamk.mobile.timetable.RootFragmentSummary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/lukkari_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:onClick="barLukkariOnClick">
+
+                <TextView
+                    android:id="@+id/lukkari_bar_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:gravity="center_vertical"
+                    android:padding="4dp"
+                    android:text="Lukujärjestys"
+                    android:textAppearance="@style/Base.Theme.AppCompat"
+                    android:textSize="24sp"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_right_arrow_dark" />
+
+                <View android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@id/lukkari_bar_text_view"/>
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progressbarreservations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lukkari_bar"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/empty_view_reservations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lukkari_bar"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Lukujärjestyksen hakeminen ei onnistunut. \n\nJoko Internet-yhteyttä ei ole, \nPeppin palvelimissa on vikaa tai \nopintokori on tyhjä."
+                android:visibility="gone" />
+
+            <android.support.v7.widget.RecyclerView
+                android:descendantFocusability="blocksDescendants"
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/rv_reservations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lukkari_bar"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/ruokalista_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:onClick="barRuokalistaOnClick">
+
+                <TextView
+                    android:id="@+id/ruokalista_bar_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:gravity="center_vertical"
+                    android:padding="4dp"
+                    android:text="Ruokalista"
+                    android:textAppearance="@style/Base.Theme.AppCompat"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_right_arrow_dark" />
+
+                <View android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@id/ruokalista_bar_text_view"/>
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progressbarrestaurant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ruokalista_bar"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/empty_view_restaurant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ruokalista_bar"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Ruokalistan hakeminen ei onnistunut. \n\nJoko Internet-yhteyttä ei ole, \nSodexon palvelimissa on vikaa tai \nruokalistaa ei tälle päivälle ole saatavissa."
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/empty_view_restaurant_eventti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ruokalista_bar"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Ruokalistan hakeminen ei onnistunut. \n\nEventin sivuston rakenne on muuttunut.\nVoit lähettää vihaista palautetta sovelluksen kehittäjälle."
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/empty_view_restaurant_no_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ruokalista_bar"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Ruokalistan hakeminen ei onnistunut. \n\nEt ole valinnut oletusravintolaa. Voit asettaa oletusravintolan asetukset välilehdellä."
+                android:visibility="gone" />
+
+            <android.support.v7.widget.RecyclerView
+                android:descendantFocusability="blocksDescendants"
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/rv_courses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ruokalista_bar">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/adSpace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+</ScrollView>

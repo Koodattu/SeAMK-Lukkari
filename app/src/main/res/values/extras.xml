@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vastaus_universumiin" translatable="false">42</string>
+
+    <string name="bakko" translatable="false">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmbDkaXQFpxRxiMEb7sSbDhBBYT1tNEbkXPeWljeu2VcsW9VM6wkIJUBBkOmQD0hWVQZI3fb3oO7pNy6ZiFbOoaGzoOr9oj5kAm2gJEIlVASFefzA7F7f6khHHmXKM+iFho6zB0uGD0ytDp50dZBWsF+igUr2O8VX9wGiLl6u41XGtuyXKnS31l34VFcBuK/9N30LJ1JMLR4bU2TjocdlTOrjNinlcIpZoiIC6NFu/OemmpVGpC5DLJV5GTYetLJlEuDscFYNH3ENyQb2NbPwJfss8CNNt4cvPhoOX+SSTNk0GXQdbEed3rigUic1Oqs4Y2BfBpx2ABwm9b5xxxgA7wIDAQAB</string>
+    <string name="pakko" translatable="false">YYKIVqEpg4SOEncTP2Tx</string>
+
+    <string name="week_name" translatable="false">0cgJd2Hf6Fhj3uIx7iD+0A==</string>
+    <string name="month_name" translatable="false">H+KIwQg8y0eKXgD7WNgvxg==</string>
+    <string name="year_name" translatable="false">1ikfcyfnc9knE9uIiMNQAw==</string>
+    <string name="avaruus" translatable="false"></string>
+
+    <string name="pakko_e" translatable="false">2tDXBTfHZ+Iw7IYtW0bgyS36lgYln7GQMUfYlC1OloQ=</string>
+    <string name="bakko_e" translatable="false">mFH+18I7L8vIhsBO+3hCeBPHJF5s9DuAXLy5LZ3Z4RF+r8QbRhvVM/URaBjFHXWLQhbWHeImFiufrwvl0W43XyINO56s5C1NYJHC7dh8r5+zjx8Ka9/zNA/XH+mXoNeuVtjYB7brlHoohtQOgmM06DyJYNZtFhWekfICINyoPRbEujK0SgfycPtX45356A/58TgRZWt7hkGzPNVfzF4I7m+ywfS5mFtyMhz5bmVvZxTsgb55z3oed1g8gxAf6IePDE78DyHj8YUt6IJMZEnDFFoSXaS/doI6br+fmmSE9w2IcfgCR/3LebX/vBP9hd5RqkfVwkQeKFWYlzYYFJTOFIQgTLKH88F5kno5efywAZAXD05M2KC9+za+pQer7CQHuxzb4HRBGzCPYxPHTwDftNtr3zeYFRAmzBMKGpp8F2S6vJA01CS8/zueZUh1+hgGn7GePQKvp/6tt3hX6BVxfPzZcQNgj4NEmY/lHIK8DNnuJacYQZWPAxSQ8o1okyWnSJTuqF2OoYUJO4hJixVmpQ==</string>
+
+    <string name="emaillogin" translatable="false">seamk.lukkari.palaute@gmail.com</string>
+    <string name="emailpassword" translatable="false">ootkylkovahakkeri</string>
+</resources>

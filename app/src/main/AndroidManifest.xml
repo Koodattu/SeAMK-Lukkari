@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.seamk.mobile">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application
+        tools:ignore="GoogleAppIndexingWarning"
+        android:name=".MainController"
+        android:allowBackup="true"
+        android:icon="@mipmap/seamklukkarilogo"
+        android:label="SeAMKLukkari"
+        android:launchMode="singleTop"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6426182185430448~8323607887"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".search.RootActivityClassroom"
+            android:label="Classroom"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".search.RootActivitySearchTimetable"
+            android:label="SearchTimetable"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ActivityLinkWebView"
+            android:label="LinkWebView"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".roomsearch.RootActivityEmptyRoomSearchResults"
+            android:label="EmptyRoomSearchResults"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".onboarding.ActivityOnboarding"
+            android:label="Onboarding"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".setup.ActivitySetup"
+            android:label="Setup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".studybasket.ActivityBasketAddItem"
+            android:label="BasketAddItem"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="ActivityReservationDetails"
+            android:label="ReservationDetails"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivityRealizationDetails"
+            android:label="ReservationDetails"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ActivityAgreement"
+            android:label="Agreement"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

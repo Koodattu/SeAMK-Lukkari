@@ -1,0 +1,36 @@
+{
+	"_source": [],
+	"size": 0,
+	"query": {
+		"filtered": {
+			"filter": {
+				"and": [
+				{
+					"range": {
+						"startDate": {
+							"gte": "2018-01-01",
+							"lte": "2018-01-01"
+						}
+					}
+				},
+				{
+                    "term": {
+                        "currentStatus": "APPROVED"
+                    }
+                }
+				]
+			}
+		}
+	},
+	"aggs": {
+		"mostReservedTeachers": {
+			"terms": {
+				"field": "reservedFor.name.raw",
+				"size": 10000,
+				"order": {
+					"_count": "desc"
+				}
+			}
+		}
+	}
+}

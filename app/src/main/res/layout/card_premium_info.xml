@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardMaxElevation="4dp"
+    app:cardElevation="4dp"
+    android:layout_marginBottom="4dp"
+    android:id="@+id/card_view">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/extra_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <com.tolstykh.textviewrichdrawable.TextViewRichDrawable
+                android:id="@+id/extra_title_with_icon"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/information"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:drawablePadding="8dp"
+                app:compoundDrawableHeight="32dp"
+                app:compoundDrawableWidth="32dp"
+                android:textSize="18sp"
+                android:drawableRight="@drawable/ic_more_white"
+                android:drawableEnd="@drawable/ic_more_white"
+                android:drawableLeft="@drawable/ic_information"
+                android:drawableStart="@drawable/ic_information"
+                app:drawableTint="@android:color/white"/>
+
+            <TextView
+                android:text="@string/premium_info"
+                android:id="@+id/extra_desc"
+                android:layout_below="@id/extra_title_with_icon"
+                android:layout_margin="4dp"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"/>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:layout_marginTop="-8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_below="@id/extra_desc"
+                app:el_duration="500"
+                app:el_expanded="false"
+                app:el_parallax="0"
+                android:id="@+id/expandable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:padding="8dp"
+                    android:id="@+id/tv_expanded_info"
+                    android:background="@android:color/white"
+                    android:textColor="@android:color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                    android:textSize="14sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/premium_info_details"/>
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:layout_gravity="center"
+        android:layout_margin="0dp"
+        android:measureWithLargestChild="true"
+        android:weightSum="100"
+        android:id="@+id/tl"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="15"
+            android:weightSum="1"
+            android:id="@+id/tr0">
+
+            <TextView
+                android:layout_weight="0.3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/building"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+            <TextView
+                android:layout_weight="0.4"
+                android:id="@+id/TVChosenBuilding"
+                android:text="-"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+            <Button
+                android:layout_weight="0.3"
+                android:id="@+id/BChooseBuilding"
+                android:text="@string/choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textSize="14sp"
+                android:padding="8dp"/>
+
+            <ProgressBar
+                android:layout_weight="0.3"
+                android:padding="8dp"
+                android:id="@+id/PBBuilding"/>
+
+        </TableRow>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:weightSum="1"
+            android:gravity="center"
+            android:id="@+id/tr1">
+
+            <TextView
+                android:textAlignment="textStart"
+                android:layout_weight="0.3"
+                android:text="@string/type"
+                android:maxLines="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+
+            <RelativeLayout
+                android:layout_weight="0.7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TableRow>
+
+                        <RadioButton
+                            android:id="@+id/RBAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:text="@string/all" />
+
+                        <RadioButton
+                            android:id="@+id/RBAtk"
+                            android:layout_margin="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/atk" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <RadioButton
+                            android:id="@+id/RBTheory"
+                            android:layout_margin="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/theory" />
+
+                        <RadioButton
+                            android:id="@+id/RBBox"
+                            android:layout_margin="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/box" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </RelativeLayout>
+
+        </TableRow>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="15"
+            android:weightSum="1"
+            android:id="@+id/tr2">
+            <TextView
+                android:layout_weight="0.3"
+                android:text="@string/when"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+            <TextView
+                android:layout_weight="0.4"
+                android:id="@+id/TVChosenDate"
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+            <Button
+                android:layout_weight="0.3"
+                android:id="@+id/BChooseDate"
+                android:text="@string/choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textSize="14sp"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="15"
+            android:weightSum="1"
+            android:id="@+id/tr3">
+
+            <RelativeLayout
+                android:layout_weight="0.3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+                <Button
+                    android:id="@+id/BNow"
+                    android:text="@string/now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_weight="0.4"
+                android:id="@+id/TVChosenTime"
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+            <Button
+                android:layout_weight="0.3"
+                android:id="@+id/BChooseTime"
+                android:text="@string/choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textSize="14sp"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="40">
+            <Button
+                android:id="@+id/BSearch"
+                android:text="@string/run_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textSize="16sp"
+                android:padding="16dp"/>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

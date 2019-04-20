@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_action_refresh"
+        android:title=""
+        app:showAsAction="ifRoom"/>
+    <item
+         android:id="@+id/action_more_options"
+         android:icon="@drawable/ic_more_options"
+         android:title=""
+         app:showAsAction="ifRoom">
+         <menu>
+
+             <item android:id="@+id/change_view_goto_today"
+                 app:showAsAction="ifRoom"
+                 android:title="Etsi tämä päivä" />
+
+             <item android:id="@+id/change_view_one_day"
+                 app:showAsAction="ifRoom"
+                 android:title="Näytä yksi päivä" />
+
+             <item android:id="@+id/change_view_three_days"
+                 app:showAsAction="ifRoom"
+                 android:title="Näytä kolme päivää" />
+
+             <item android:id="@+id/change_view_five_days"
+                 app:showAsAction="ifRoom"
+                 android:title="Näytä viisi päivää" />
+
+         </menu>
+     </item>
+</menu>

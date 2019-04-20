@@ -1,0 +1,62 @@
+{
+	"_source": [
+	"code",
+	"startDate",
+	"endDate",
+	"localizedName.*",
+	"studentGroups.*",
+	"teacher"
+	],
+	"size": 100,
+	"query": {
+		"constant_score": {
+			"filter": {
+				"bool": {
+					"should": [{
+						"regexp": {
+							"code": ""
+						}
+					},{
+						"regexp": {
+							"code.raw": ""
+						}
+					},
+					{
+						"regexp": {
+							"localizedName.valueFi": ""
+						}
+					},
+					{
+						"regexp": {
+							"localizedName.valueFi.raw": ""
+						}
+					},
+					{
+						"regexp": {
+							"localizedName.valueEn": ""
+						}
+					},
+					{
+						"regexp": {
+							"localizedName.valueEn.raw": ""
+						}
+					}],
+					"must": [{
+						"range": {
+							"startDate": {
+								"gte": "2018-01-01",
+								"lte": "2018-01-01"
+							}
+						}
+					},
+					{
+						"terms": {
+							"currentStatus": ["PUBLISHED",
+							"APPROVED"]
+						}
+					}]
+				}
+			}
+		}
+	}
+}

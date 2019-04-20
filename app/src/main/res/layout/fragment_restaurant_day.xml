@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.seamk.mobile.restaurant.FragmentRestaurantDayTab">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/day_fragment_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ebebeb"
+        android:scrollbars="vertical" />
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="Ruokalistan hakeminen ei onnistunut. \n\nJoko Internet-yhteyttä ei ole, \nSodexon\Areenan palvelimissa on vikaa tai \nruokalistaa ei kyseiselle päivälle ole saatavissa, tai\nEventin sivuston rakenne on muuttunut." />
+
+</RelativeLayout>
