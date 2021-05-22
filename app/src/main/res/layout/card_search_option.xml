@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cv"
@@ -36,10 +36,10 @@
             android:layout_height="54dp"
             android:id="@+id/acceptImage"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_right_arrow"
+            app:srcCompat="@drawable/ic_right_arrow"
             android:layout_gravity="center"
             android:tint="@color/grayedOut"/>
 
     </RelativeLayout>
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

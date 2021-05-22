@@ -4,8 +4,8 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.github.paolorotolo.appintro.AppIntro;
 import com.seamk.mobile.eventbusevents.NextSlideEvent;
@@ -68,7 +68,7 @@ public class ActivitySetup extends AppIntro {
 
     @Override
     public void onBackPressed() {
-        if (pager.isFirstSlide(fragments.size())){
+        if (pager.getCurrentItem() == 0){
             //TODO sammutetaan
         } else {
             super.onBackPressed();
@@ -90,7 +90,7 @@ public class ActivitySetup extends AppIntro {
     @Override
     public void onSlideChanged(@Nullable Fragment oldFragment, @Nullable Fragment newFragment) {
         super.onSlideChanged(oldFragment, newFragment);
-        if (pager.isFirstSlide(fragments.size())){
+        if (pager.getCurrentItem() == 0){
             setProgressButtonEnabled(true);
         } else {
             setProgressButtonEnabled(false);
@@ -117,10 +117,9 @@ public class ActivitySetup extends AppIntro {
             public void run() {
                 SharedPreferences preferences = getSharedPreferences("ApplicationPreferences", 0);
                 if (preferences.contains("restaurantCode")){
-                    pager.goToNextSlide();
-                    pager.goToNextSlide();
+                    pager.setCurrentItem(pager.getCurrentItem()+2, true);
                 } else {
-                    pager.goToNextSlide();
+                    pager.setCurrentItem(pager.getCurrentItem()+1, true);
                 }
             }
         }, 250);
@@ -132,10 +131,9 @@ public class ActivitySetup extends AppIntro {
             @Override
             public void run() {
                 if (slides == 1){
-                    pager.goToPreviousSlide();
+                    pager.setCurrentItem(pager.getCurrentItem()-1, true);
                 } else {
-                    pager.goToPreviousSlide();
-                    pager.goToPreviousSlide();
+                    pager.setCurrentItem(pager.getCurrentItem()-2, true);
                 }
             }
         }, 100);

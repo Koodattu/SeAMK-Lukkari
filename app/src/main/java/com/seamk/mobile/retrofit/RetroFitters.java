@@ -1,7 +1,7 @@
 package com.seamk.mobile.retrofit;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.seamk.mobile.R;
 import com.seamk.mobile.elasticsearch.ElasticBuildings;

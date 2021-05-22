@@ -1,9 +1,9 @@
 package com.seamk.mobile;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -243,14 +243,14 @@ public class ActivityRealizationDetails extends AppCompatActivity {
     void addText(String titleText, String dataText){
         TextView title = new TextView(this);
         title.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 0.4f));
-        title.setTextAppearance(this, android.support.v7.appcompat.R.style.Base_TextAppearance_AppCompat_Display1);
+        title.setTextAppearance(this, R.style.Base_TextAppearance_AppCompat_Display1);
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
         title.setTextAlignment(TEXT_ALIGNMENT_TEXT_START);
         title.setText(titleText);
 
         TextView data = new TextView(this);
         data.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 0.6f));
-        data.setTextAppearance(this, android.support.v7.appcompat.R.style.Base_TextAppearance_AppCompat_Display1);
+        data.setTextAppearance(this, R.style.Base_TextAppearance_AppCompat_Display1);
         data.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
         data.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
         data.setText(dataText);

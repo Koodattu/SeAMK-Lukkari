@@ -3,8 +3,8 @@ package com.seamk.mobile.onboarding;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.github.paolorotolo.appintro.AppIntro;
 
@@ -52,6 +52,8 @@ public class ActivityOnboarding extends AppIntro {
         setSeparatorColor(Color.parseColor("#000000"));
 
         // Hide Skip/Done button.
+        //TODO
+        //setProgressButtonEnabled(true);
         setProgressButtonEnabled(true);
         showSkipButton(true);
         setSkipText("Ohita");
@@ -64,7 +66,7 @@ public class ActivityOnboarding extends AppIntro {
         setVibrateIntensity(30);
         */
     }
-
+/* TODO
     @Override
     public void onBackPressed() {
         if (pager.isFirstSlide(fragments.size())){
@@ -73,7 +75,7 @@ public class ActivityOnboarding extends AppIntro {
             super.onBackPressed();
         }
     }
-
+*/
     @Override
     public void onSkipPressed(Fragment currentFragment) {
         super.onSkipPressed(currentFragment);

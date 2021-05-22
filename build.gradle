@@ -1,10 +1,12 @@
 buildscript {
     repositories {
-        jcenter()
         google()
+        maven { url 'https://jitpack.io' }
+        mavenCentral()
+        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle:4.2.1'
     }
 }
 
@@ -13,9 +15,10 @@ allprojects {
         options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
     }*/
     repositories {
-        jcenter()
         google()
         maven { url 'https://jitpack.io' }
+        mavenCentral()
+        jcenter()
     }
 }
 

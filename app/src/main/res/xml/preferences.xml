@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.preference.PreferenceScreen
+<androidx.preference.PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.support.v7.preference.PreferenceCategory
+    <androidx.preference.PreferenceCategory
         android:title="@string/general">
-        <android.support.v7.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
             android:key="showWholeWeek"
             android:title="@string/settings_show_week_title"
             android:summary="@string/settings_show_week_desc"
             android:defaultValue="false"/>
-        <android.support.v7.preference.ListPreference
+        <androidx.preference.ListPreference
             android:key="restaurantCode"
             android:title="@string/settings_summary_default_restaurant_title"
             android:summary="@string/settings_summary_default_restaurant_desc"
             android:entries="@array/restaurantName"
             android:entryValues="@array/restaurantCode" />
-        <android.support.v7.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
             android:key="showCameraButton"
             android:title="@string/settings_show_camera_title"
             android:summary="@string/settings_show_camera_desc"
@@ -36,7 +36,7 @@
                 />
         </android.support.v7.preference.Preference>
         -->
-    </android.support.v7.preference.PreferenceCategory>
+    </androidx.preference.PreferenceCategory>
 <!--
     <android.support.v7.preference.PreferenceCategory
         android:title="Tiivistelmä">
@@ -52,14 +52,14 @@
             android:defaultValue="false"/>
     </android.support.v7.preference.PreferenceCategory>
 -->
-    <android.support.v7.preference.PreferenceCategory
+    <androidx.preference.PreferenceCategory
         android:title="@string/timetable">
-        <android.support.v7.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
             android:key="showSchedulingGroups"
             android:title="@string/show_scheduling_groups"
             android:summary="@string/show_scheduling_groups_desc"
             android:defaultValue="true"/>
-        <android.support.v7.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
             android:key="useAlternativeLocation"
             android:title="@string/use_alternativeLocation"
             android:summary="@string/use_alternativeLocation_desc"
@@ -76,15 +76,15 @@
             android:summary="Näytä päivät joille ei ole tunteja"
             android:defaultValue="true"/>
             -->
-    </android.support.v7.preference.PreferenceCategory>
+    </androidx.preference.PreferenceCategory>
 
-    <android.support.v7.preference.PreferenceCategory
+    <androidx.preference.PreferenceCategory
         android:title="Muut">
-        <android.support.v7.preference.SwitchPreferenceCompat
+        <androidx.preference.SwitchPreferenceCompat
             android:key="showAdverts"
             android:title="@string/show_adverts"
             android:summary="@string/show_adverts_desc"
             android:defaultValue="true"/>
-    </android.support.v7.preference.PreferenceCategory>
+    </androidx.preference.PreferenceCategory>
 
-</android.support.v7.preference.PreferenceScreen>
+</androidx.preference.PreferenceScreen>

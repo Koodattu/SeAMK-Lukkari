@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:descendantFocusability="blocksDescendants"
         android:id="@+id/rv"
         android:layout_width="match_parent"
@@ -22,12 +22,12 @@
         android:gravity="center"
         android:text="Opintokorisi on tyhjä\n\nVoit lisätä ryhmiä ja toteutuksia\npainamalla lisäys-nappia oikeassa alanurkassa."/>
 
-    <android.support.design.widget.CoordinatorLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.design.widget.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -36,6 +36,6 @@
             app:backgroundTint="@android:color/holo_orange_dark"
             app:srcCompat="@drawable/ic_add" />
 
-    </android.support.design.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </RelativeLayout>

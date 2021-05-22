@@ -2,10 +2,12 @@ package com.seamk.mobile;
 
 import android.app.Application;
 import android.content.Context;
-import android.os.Build;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import org.solovyev.android.checkout.Billing;
 
@@ -30,12 +32,19 @@ public class MainController extends Application {
     {
         super.onCreate();
         // load the correct ad depending on whether app is running inside an emulator or not
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        /*
         if (isEmulator()){
             MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
         }
         else{
             MobileAds.initialize(this, "ca-app-pub-6426182185430448~8323607887");
         }
+         */
         sApplication = this;
         appInstance = this;
         mBilling = new Billing(this, new Billing.DefaultConfiguration() {

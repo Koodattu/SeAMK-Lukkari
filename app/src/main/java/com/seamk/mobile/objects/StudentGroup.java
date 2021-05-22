@@ -1,8 +1,8 @@
 package com.seamk.mobile.objects;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
@@ -59,11 +59,10 @@ public class StudentGroup extends AbstractItem<StudentGroup, StudentGroup.ViewHo
     }
 
     @Override
-    public void bindView(@NonNull StudentGroup.ViewHolder viewHolder, @NonNull List<Object> payloads) {
-        super.bindView(viewHolder, payloads);
-        Context context = viewHolder.itemView.getContext();
-
-        viewHolder.studentGroupName.setText(StudentGroupCode);
+    public void bindView(@NonNull StudentGroup.ViewHolder holder, @NonNull List<Object> payloads) {
+        super.bindView(holder, payloads);
+        Context context = holder.itemView.getContext();
+        holder.studentGroupName.setText(StudentGroupCode);
     }
 
     @Override

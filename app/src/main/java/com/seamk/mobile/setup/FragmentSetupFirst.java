@@ -1,19 +1,18 @@
 package com.seamk.mobile.setup;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.AppCompatRadioButton;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatRadioButton;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -131,7 +130,7 @@ public class FragmentSetupFirst extends Fragment implements ISlidePolicy, View.O
                 } else {
                     itemSelected(((Teacher)item).getName());
                 }
-                Common.hideKeyboard(getActivity());
+                Common.hideKeyboard((AppCompatActivity)getActivity());
                 editText.clearFocus();
                 return true;
             }
@@ -169,7 +168,7 @@ public class FragmentSetupFirst extends Fragment implements ISlidePolicy, View.O
                     //Toast.makeText(getContext(), R.string.text_box_is_empty, Toast.LENGTH_SHORT).show();
                     Toasty.info(getContext(), getResources().getString(R.string.text_box_is_empty), Toast.LENGTH_SHORT, true).show();
                 } else {
-                    Common.hideKeyboard(getActivity());
+                    Common.hideKeyboard((AppCompatActivity)getActivity());
                     editText.clearFocus();
                     itemSelected(editText.getText().toString().toUpperCase());
                     EventBus.getDefault().post(new NextSlideEvent());
