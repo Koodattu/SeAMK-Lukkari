@@ -261,24 +261,17 @@
     <string name="box">Boxi</string>
     <string name="when">Milloin</string>
     <string name="now">Nyt</string>
-    <string name="winha">Winha</string>
     <string name="error_time_out_buildings">Rakennusten haku palvelimelta epäonnistui: palvelin ei vastannut.</string>
     <string name="error_no_internet_buildings">Rakennusten haku palvelimelta epäonnistui: internet yhteyttä ei ole.</string>
     <string name="error_unknown_buildings">Rakennusten haku palvelimelta epäonnistui: tuntematon virhe.</string>
-    <string name="winha_info">Tämä ominaisuus on vielä kehityksessä. Tämän hetkinen toimivuus rajoittuu suoritettujen kurssien hakemiseen WinhaWillestä, keskiarvon laskemiseen ja arvosanajakauman piirtoon.</string>
-    <string name="winha_please_wait">Ole hyvä ja odota…</string>
     <string name="results">Tulokset</string>
     <string name="gpa">Keskiarvo</string>
-    <string name="winha_courses">Kurssit</string>
     <string name="sort">Järjestä</string>
     <string name="login">Kirjaudu</string>
     <string name="remember_password">Muista salasana</string>
     <string name="password">Salasana</string>
     <string name="remember_username">Muista käyttäjätunnus</string>
     <string name="username">Käyttäjätunnus</string>
-    <string name="winha_invalid_password">Virhe: Mahdollisesti väärä salasana?</string>
-    <string name="winha_time_out">Virhe: Palvelin ei vastannut.</string>
-    <string name="winha_unkown_error">Tuntematon virhe:</string>
     <string name="done">Valmis!</string>
     <string name="calculating_scores">Lasketaan pisteitä…</string>
     <string name="loading_hops">Ladataan HOPS…</string>
@@ -287,8 +280,4 @@
     <string name="logging_in">Kirjaudutaan…</string>
     <string name="fetching_login_page">Haetaan kirjautumissivu…</string>
     <string name="fill_empty_fields">Täytä tyhjät kentät!</string>
-    <string name="winha_no_internet">Virhe: Ei internet-yhteyttä.</string>
-    <string name="winha_graph_grades">Arvosana jakauma</string>
-    <string name="winha_graph_grade_average_over_time">Keskiarvo kehittyminen</string>
-    <string name="winha_graph_cumulative_credits">Opintopisteiden keräytyminen</string>
 </resources>

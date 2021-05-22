@@ -276,12 +276,8 @@
     <string name="error_time_out_buildings">Fetching list of buildings from the server failed: the server didn\'t respond.</string>
     <string name="error_no_internet_buildings">Fetching list of buildings from the server failed: no connection to internet.</string>
     <string name="error_unknown_buildings">Fetching list of buildings from the server failed: unknown error.</string>
-    <string name="winha">Winha</string>
-    <string name="winha_info">This feature is still a work in progress. \n\nIt currently only fetches your courses from WinhaWille, calculates your gpa and graphs your grade distribution.</string>
-    <string name="winha_please_wait">Please wait while we fetch the data…</string>
     <string name="results">Results</string>
     <string name="gpa">GPA</string>
-    <string name="winha_courses">Courses</string>
     <string name="sort">Sort:</string>
     <string name="login">Login</string>
     <string name="remember_password">Remember password</string>
@@ -289,9 +285,6 @@
     <string name="remember_username">Remember username</string>
     <string name="username">Username</string>
     <string name="credits">Credits</string>
-    <string name="winha_invalid_password">Error occurred: Password might be invalid.</string>
-    <string name="winha_time_out">Error occurred: Server didn\'t respond.</string>
-    <string name="winha_unkown_error">Unknown error occurred:</string>
     <string name="done">Done!</string>
     <string name="calculating_scores">Calculating scores…</string>
     <string name="loading_hops">Loading HOPS…</string>
@@ -300,8 +293,4 @@
     <string name="logging_in">Logging in…</string>
     <string name="fetching_login_page">Fetching login page…</string>
     <string name="fill_empty_fields">Fill empty fields!</string>
-    <string name="winha_no_internet">Error occurred: No internet connection.</string>
-    <string name="winha_graph_grades">Grade distribution</string>
-    <string name="winha_graph_grade_average_over_time">GPA development</string>
-    <string name="winha_graph_cumulative_credits">Cumulation of credits</string>
 </resources>

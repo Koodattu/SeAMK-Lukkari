@@ -204,11 +204,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     fragmentTransaction.replace(R.id.frame, fragment, "TIMETABLE_WEEK_FRAGMENT");
                     fragmentTransaction.addToBackStack("TAG");
                     break;
-                case R.id.winha_view:
-                    fragment = new FragmentWinha();
-                    fragmentTransaction.replace(R.id.frame, fragment, "WINHA_FRAGMENT");
-                    fragmentTransaction.addToBackStack("TAG");
-                    break;
                 case R.id.food_view:
                     fragment = new RootFragmentRestaurants();
                     fragmentTransaction.replace(R.id.frame, fragment, "RESTAURANTS_FRAGMENT");

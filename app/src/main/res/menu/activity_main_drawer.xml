@@ -23,13 +23,6 @@
             android:title="@string/find" />
     </group>
     <group android:checkableBehavior="single"
-        android:id="@+id/winha_menu">
-        <item
-            android:id="@+id/winha_view"
-            android:icon="@drawable/ic_assignment"
-            android:title="@string/winha" />
-    </group>
-    <group android:checkableBehavior="single"
         android:id="@+id/restaurant_menu">
         <item
             android:id="@+id/food_view"

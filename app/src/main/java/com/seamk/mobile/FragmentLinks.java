@@ -81,7 +81,6 @@ public class FragmentLinks extends Fragment {
         links.add(new Link("SeAMK Yhteystiedot", "https://www.seamk.fi/seamk-info/yhteystiedot/"));
         links.add(new Link("Kampus Kartta", "https://i.imgur.com/2Vw0uSz.jpg"));
         links.add(new Link("Sähköposti", "https://mail.epedu.fi/owa"));
-        links.add(new Link("WinhaWille", "https://wille.epedu.fi/"));
         links.add(new Link("Intra", "https://intra.seamk.fi/Etusivu"));
         links.add(new Link("Kirjasto ajat ja tiedot", "https://kirjasto.seamk.fi/aukiolot-ja-yhteystiedot/"));
 
