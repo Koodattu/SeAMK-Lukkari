@@ -7,7 +7,7 @@ import android.view.animation.AnimationUtils;
 import com.seamk.mobile.util.FragmentUtils;
 
 /**
- * Created by Jupe Danger on 29.3.2018.
+ * Created by Juha Ala-Rantala on 29.3.2018.
  */
 
 public class UtilityFragment extends Fragment {

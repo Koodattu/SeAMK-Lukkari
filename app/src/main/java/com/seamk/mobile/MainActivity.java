@@ -39,6 +39,10 @@ import java.lang.reflect.Field;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * Created by Juha Ala-Rantala on 10.2.2017.
+ */
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @BindView(R.id.frame) FrameLayout frameLayout;

@@ -6,12 +6,12 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.initialization.AdapterStatus;
 
 import org.solovyev.android.checkout.Billing;
 
-import static com.seamk.mobile.util.Common.isEmulator;
+import java.util.Map;
+
 import static com.seamk.mobile.util.Common.returnTrue;
 
 /**
@@ -31,20 +31,11 @@ public class MainController extends Application {
     public void onCreate()
     {
         super.onCreate();
-        // load the correct ad depending on whether app is running inside an emulator or not
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
+
+        MobileAds.initialize(this, initializationStatus -> {
+            Map<String, AdapterStatus> map = initializationStatus.getAdapterStatusMap();
         });
-        /*
-        if (isEmulator()){
-            MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
-        }
-        else{
-            MobileAds.initialize(this, "ca-app-pub-6426182185430448~8323607887");
-        }
-         */
+
         sApplication = this;
         appInstance = this;
         mBilling = new Billing(this, new Billing.DefaultConfiguration() {

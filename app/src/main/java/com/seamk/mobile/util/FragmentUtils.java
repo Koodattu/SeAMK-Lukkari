@@ -1,7 +1,7 @@
 package com.seamk.mobile.util;
 
 /**
- * Created by Jupe Danger on 29.3.2018.
+ * Created by Juha Ala-Rantala on 29.3.2018.
  */
 
 public class FragmentUtils {
