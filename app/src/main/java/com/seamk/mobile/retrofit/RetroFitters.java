@@ -84,7 +84,7 @@ public class RetroFitters {
 
         ESString = jsonObjectES.toString();
 
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), ESString);
+        RequestBody requestBody = RequestBody.create(ESString, MediaType.parse("application/json"));
 
         OkHttpClient httpClient = new OkHttpClient.Builder().addInterceptor(new BasicAuthInterceptor(stringToString(context), "")).build();
 
@@ -134,7 +134,7 @@ public class RetroFitters {
 
         ESString = jsonObjectES.toString();
 
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), ESString);
+        RequestBody requestBody = RequestBody.create(ESString, MediaType.parse("application/json"));
 
         OkHttpClient httpClient = new OkHttpClient.Builder().addInterceptor(new BasicAuthInterceptor(stringToString(context), "")).build();
 
@@ -184,9 +184,9 @@ public class RetroFitters {
 
         ESString = jsonObjectES.toString();
 
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), ESString);
-
-        OkHttpClient httpClient = new OkHttpClient.Builder().addInterceptor(new BasicAuthInterceptor(stringToString(context), "")).build();
+        RequestBody requestBody = RequestBody.create(ESString, MediaType.parse("application/json"));
+String creds = stringToString(context);
+        OkHttpClient httpClient = new OkHttpClient.Builder().addInterceptor(new BasicAuthInterceptor(creds, "")).build();
 
         Retrofit.Builder builder = new Retrofit.Builder().baseUrl("https://opendata.seamk.fi:443").addConverterFactory(GsonConverterFactory.create());
 
@@ -260,7 +260,7 @@ public class RetroFitters {
 
         ESString = jsonObjectES.toString();
 
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), ESString);
+        RequestBody requestBody = RequestBody.create(ESString, MediaType.parse("application/json"));
 
         OkHttpClient httpClient = new OkHttpClient.Builder().addInterceptor(new BasicAuthInterceptor(stringToString(context), "")).build();
 
@@ -324,7 +324,7 @@ public class RetroFitters {
 
         ESString = jsonObjectES.toString();
 
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), ESString);
+        RequestBody requestBody = RequestBody.create(ESString, MediaType.parse("application/json"));
 
         OkHttpClient httpClient = new OkHttpClient.Builder().addInterceptor(new BasicAuthInterceptor(stringToString(context), "")).build();
 
@@ -396,7 +396,7 @@ public class RetroFitters {
 
         ESString = jsonObjectES.toString();
 
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), ESString);
+        RequestBody requestBody = RequestBody.create(ESString, MediaType.parse("application/json"));
 
         OkHttpClient httpClient = new OkHttpClient.Builder().addInterceptor(new BasicAuthInterceptor(stringToString(context), "")).build();
 
@@ -469,7 +469,7 @@ public class RetroFitters {
 
         ESString = jsonObjectES.toString();
 
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), ESString);
+        RequestBody requestBody = RequestBody.create(ESString, MediaType.parse("application/json"));
 
         OkHttpClient httpClient = new OkHttpClient.Builder().addInterceptor(new BasicAuthInterceptor(stringToString(context), "")).build();
 
@@ -539,7 +539,7 @@ public class RetroFitters {
 
         ESString = jsonObjectES.toString();
 
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), ESString);
+        RequestBody requestBody = RequestBody.create(ESString, MediaType.parse("application/json"));
 
         OkHttpClient httpClient = new OkHttpClient.Builder().addInterceptor(new BasicAuthInterceptor(stringToString(context), "")).build();
 
@@ -589,7 +589,7 @@ public class RetroFitters {
 
         ESString = jsonObjectES.toString();
 
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), ESString);
+        RequestBody requestBody = RequestBody.create(ESString, MediaType.parse("application/json"));
 
         OkHttpClient httpClient = new OkHttpClient.Builder().addInterceptor(new BasicAuthInterceptor(stringToString(context), "")).build();
 

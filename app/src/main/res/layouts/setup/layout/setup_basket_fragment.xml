@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:padding="30dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Olen"
+        android:textColor="@android:color/white"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/setup_basket_student_radiobutton"
+            android:textSize="14sp"
+            app:buttonTint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/student"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/setup_basket_teacher_radiobutton"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            app:buttonTint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:text="@string/teacher"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+    </RadioGroup>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:measureWithLargestChild="true">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/setup_basket_codes_names_textview"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:text="@string/group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <AutoCompleteTextView
+                android:id="@+id/setup_basket_codes_names_autocomplete"
+                android:completionThreshold="3"
+                android:enabled="false"
+                android:width="200dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <ProgressBar
+                android:id="@+id/setup_basket_progressbar"
+                android:indeterminate="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/setup_basket_retry_button"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_margin="80dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:text="@string/try_again"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:textSize="18sp"
+                android:text="@string/restaurant"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/setup_basket_restaurants_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </TableRow>
+    </TableLayout>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/setup_basket_skip_checkbox"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        app:buttonTint="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="Ohita" />
+</LinearLayout>
+</FrameLayout>

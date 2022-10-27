@@ -14,7 +14,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.customview.widget.ViewDragHelper;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.graphics.drawable.DrawerArrowDrawable;
@@ -25,16 +24,12 @@ import android.widget.FrameLayout;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.seamk.mobile.activities.ActivityAgreement;
-import com.seamk.mobile.onboarding.ActivityOnboarding;
 import com.seamk.mobile.restaurant.RootFragmentRestaurants;
-import com.seamk.mobile.setup.ActivitySetup;
+import com.seamk.mobile.setup.SetupActivity;
 import com.seamk.mobile.studybasket.FragmentStudyBasket;
 import com.seamk.mobile.timetable.FragmentTimetableGrid;
 import com.seamk.mobile.timetable.RootFragmentSummary;
 import com.seamk.mobile.util.FragmentUtils;
-
-import java.lang.reflect.Field;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -72,36 +67,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerArrow.setColor(ContextCompat.getColor(this, R.color.pureWhite));
         actionbar.setHomeAsUpIndicator(drawerArrow);
 
-        getSupportFragmentManager().addOnBackStackChangedListener(
-                new FragmentManager.OnBackStackChangedListener() {
-                    public void onBackStackChanged() {
-                        ObjectAnimator.ofFloat(drawerArrow, "progress", getSupportFragmentManager().getBackStackEntryCount() > 1 ? 1 : 0).start();
-                        Handler h = new Handler();
-                        h.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
-                                    navigationView.getMenu().getItem(0).setChecked(true);
-                                    lastMenuId = navigationView.getMenu().findItem(R.id.tiivistelma).getItemId();
-                                }
-                            }
-                        }, 500);
-                    }
+        getSupportFragmentManager().addOnBackStackChangedListener(() -> {
+                    ObjectAnimator.ofFloat(drawerArrow, "progress", getSupportFragmentManager().getBackStackEntryCount() > 1 ? 1 : 0).start();
+                    Handler h = new Handler();
+                    h.postDelayed(() -> {
+                        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+                            navigationView.getMenu().getItem(0).setChecked(true);
+                            lastMenuId = navigationView.getMenu().findItem(R.id.tiivistelma).getItemId();
+                        }
+                    }, 500);
                 });
-
-        try {
-            Field mDragger = drawer.getClass().getDeclaredField("mLeftDragger");
-            mDragger.setAccessible(true);
-            ViewDragHelper draggerObj = (ViewDragHelper)mDragger.get(drawer);
-
-            Field mEdgeSize = draggerObj.getClass().getDeclaredField("mEdgeSize");
-            mEdgeSize.setAccessible(true);
-            int edge = mEdgeSize.getInt(draggerObj);
-
-            mEdgeSize.setInt(draggerObj, edge * 2);
-        } catch (NoSuchFieldException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
 
         navigationView.setNavigationItemSelectedListener(this);
         lastMenuId = navigationView.getMenu().findItem(R.id.tiivistelma).getItemId();
@@ -114,31 +89,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.getMenu().getItem(0).setChecked(true);
 
-        if (!isTaskRoot()
-                && getIntent().hasCategory(Intent.CATEGORY_LAUNCHER)
-                && getIntent().getAction() != null
-                && getIntent().getAction().equals(Intent.ACTION_MAIN)) {
-
+        // close app in some specific circumstances??
+        if (!isTaskRoot() && getIntent().hasCategory(Intent.CATEGORY_LAUNCHER) && getIntent().getAction() != null && getIntent().getAction().equals(Intent.ACTION_MAIN)) {
             finish();
         }
 
+        // clear all old settings for new version
+        if (!sharedPreferences.getBoolean("v2reset", false)){
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear();
+            editor.commit();
+            editor.putBoolean("v2reset", true);
+            editor.commit();
+        }
+
+        // start app intro setup activity
         if (!sharedPreferences.getBoolean("setupComplete", false)){
-            Intent intent = new Intent(this, ActivitySetup.class);
-            startActivity(intent);
-        }
-        if (!sharedPreferences.getBoolean("tourComplete", false)){
-            Intent intent = new Intent(this, ActivityOnboarding.class);
-            startActivity(intent);
-        }
-        if (!sharedPreferences.getBoolean("agreementComplete", false)){
-            Intent intent = new Intent(this, ActivityAgreement.class);
+            Intent intent = new Intent(this, SetupActivity.class);
             startActivity(intent);
         }
 
         // load ads
         mAdView.loadAd(new AdRequest.Builder().build());
-
-        //TODO muunna vanha basketsaveditems uuteen muotoon jos tapahtuu error
     }
 
     @Override

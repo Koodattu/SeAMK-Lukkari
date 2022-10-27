@@ -22,7 +22,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -42,14 +43,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".roomsearch.RootActivityEmptyRoomSearchResults"
-            android:label="EmptyRoomSearchResults"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="EmptyRoomSearchResults"/>
         <activity
-            android:name=".onboarding.ActivityOnboarding"
-            android:label="Onboarding"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".setup.ActivitySetup"
+            android:name=".setup.SetupActivity"
             android:label="Setup"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -63,10 +59,6 @@
         <activity
             android:name=".ActivityRealizationDetails"
             android:label="ReservationDetails"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.ActivityAgreement"
-            android:label="Agreement"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
