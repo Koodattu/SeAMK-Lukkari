@@ -36,6 +36,10 @@ Juha Ala-Rantala ([Koodattu](https://github.com/Koodattu/))
 * 1.0.0
     * Initial release
 
+## Tools used
+
+* Android Studio
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` file for more information.
