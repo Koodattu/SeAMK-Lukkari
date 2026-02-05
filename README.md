@@ -17,7 +17,7 @@ An android timetable mobile application for Seinäjoki University of Applied Sci
 
 The application requests timetable data from SeAMK's Peppi servers in json format via REST-api get and post requests. Some parts of the application are using older APIs and some are using newer faster Elasticsearch API endpoints.
 
-![](https://i.imgur.com/AJRYsRJ.png)
+![Preview](images/preview.jpg)
 
 ### Features
 * Current week's timetable for student group
